@@ -16,11 +16,14 @@ public class Ejercicios02 {
         //aleatorios y le pida al usuario un número a buscar en el vector. El
         //programa mostrará dónde se encuentra el numero y si se encuentra
         //repetido
-        
+        buscar(vector());
         
     }
+    
+    
     //vector
-    public static int[] vector(int[] ar){
+    public static int[] vector(){
+        int[] ar = new int[10];
         Scanner leer = new Scanner(System.in);
         for(int i = 0; i <10; i++){
             System.out.println("ingrese numero aleatorio");
@@ -29,20 +32,18 @@ public class Ejercicios02 {
         return ar;
     }
     
-    //buscador
-    public static void busqueda(){
-        int[] vector = new int[10];
-        vector(vector);
-        Scanner leer = new Scanner(System.in);
+    //busqueda
+    public static void buscar(int[] ars){
         int valor;
-        System.out.println("ingrese un valor a buscar");
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese valor a buscar");
         valor = leer.nextInt();
         
-        for(int i = 0;i<10;i++){
-            if(valor == vector[i]){
-                System.out.println("Valor encontrado en la posicion: ");
+        for(int i = 0; i<10;i++){
+            if(ars[i]== valor){
+                System.out.println("valor encontrado en la posicion:" + i);
             }
         }
     }
+    
 }
-//arreglar
